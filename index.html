@@ -34,7 +34,9 @@
       </video>
       <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
         <div class="text-center px-4">
-          <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">Lead the Future of Naval Technology</h2>
+          <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            <span id="heroText"></span><span class="text-blue-400 animate-pulse">|</span>
+          </h2>
           <p class="mt-4 text-lg text-gray-300 max-w-xl mx-auto">Explore career paths, certifications, and programs designed to turn you into the Navy’s next IT and Cyber expert.</p>
           <a href="roadmap.html" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">Start Your Journey</a>
         </div>
@@ -75,11 +77,11 @@
     <p>&copy; 2025 Navy IT Career Guide. Built for the Fleet.</p>
   </footer>
 
-  <!-- AOS Script -->
+  <!-- AOS Scroll Animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
 
-  <!-- Back to Top Script -->
+  <!-- Back to Top -->
   <script>
     const btn = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
@@ -88,6 +90,41 @@
     btn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  </script>
+
+  <!-- Hero Text Typing Animation -->
+  <script>
+    const phrases = [
+      "Lead the Future of Naval Technology",
+      "Master Navy IT & Cyber",
+      "Forge Your Elite Path"
+    ];
+    let i = 0, j = 0, isDeleting = false;
+    const element = document.getElementById("heroText");
+
+    function type() {
+      const currentPhrase = phrases[i];
+      if (isDeleting) {
+        j--;
+      } else {
+        j++;
+      }
+
+      element.textContent = currentPhrase.slice(0, j);
+
+      if (!isDeleting && j === currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(type, 1600);
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+        setTimeout(type, 400);
+      } else {
+        setTimeout(type, isDeleting ? 40 : 80);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
   </script>
 </body>
 </html>
