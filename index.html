@@ -6,6 +6,7 @@
   <meta name="description" content="Navy IT Career Guide redesigned with a sleek, modern look inspired by the US Space Force." />
   <title>Navy IT Career Guide</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="js/script.js" defer></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
@@ -27,10 +28,9 @@
 
   <main class="pt-24">
     <!-- Hero Section with Cyber Video Background -->
-    <section class="relative h-screen overflow-hidden">
+    <section class="relative h-screen overflow-hidden" data-aos="fade-in">
       <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
         <source src="https://adrian-dean.github.io/NavyITCareerGuide/videos/homepage-cover.mp4" type="video/mp4">
-        <!-- Optional static fallback image -->
       </video>
       <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center">
         <div class="text-center px-4">
@@ -42,21 +42,21 @@
     </section>
 
     <!-- Feature Section -->
-    <section class="py-20 bg-gray-800">
+    <section class="py-20 bg-gray-800" data-aos="fade-up">
       <div class="container mx-auto px-6">
-        <h3 class="text-3xl font-bold text-center mb-12">Explore the Mission</h3>
+        <h3 class="text-3xl font-bold text-center mb-12" data-aos="zoom-in">Explore the Mission</h3>
         <div class="grid md:grid-cols-3 gap-10">
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
+          <div class="bg-gray-900 rounded-lg shadow-md p-6" data-aos="zoom-in">
             <img src="https://images.unsplash.com/photo-1624378445140-bdc8ecf12b9d?auto=format&fit=crop&w=600&q=80" alt="Cyber Warfare" class="rounded mb-4">
             <h4 class="text-xl font-semibold mb-2">Cyber Warfare</h4>
             <p class="text-gray-400">Dive into NECs like 743A/743B and serve in elite cyber mission billets across the globe.</p>
           </div>
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
+          <div class="bg-gray-900 rounded-lg shadow-md p-6" data-aos="zoom-in">
             <img src="https://images.unsplash.com/photo-1600267165860-c68a186fe71c?auto=format&fit=crop&w=600&q=80" alt="CANES Systems" class="rounded mb-4">
             <h4 class="text-xl font-semibold mb-2">CANES Systems</h4>
             <p class="text-gray-400">Learn afloat networking with the H09A NEC, and manage enterprise systems underway.</p>
           </div>
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
+          <div class="bg-gray-900 rounded-lg shadow-md p-6" data-aos="zoom-in">
             <img src="https://images.unsplash.com/photo-1559136655-864a1f7d2aa4?auto=format&fit=crop&w=600&q=80" alt="Education & Certs" class="rounded mb-4">
             <h4 class="text-xl font-semibold mb-2">Education & Certs</h4>
             <p class="text-gray-400">Turn your experience into degrees through JST, Coursera, WGU, and more.</p>
@@ -66,8 +66,28 @@
     </section>
   </main>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hidden z-50">
+    ↑
+  </button>
+
   <footer class="bg-black text-gray-400 text-center py-6 mt-10">
     <p>&copy; 2025 Navy IT Career Guide. Built for the Fleet.</p>
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Back to Top Script -->
+  <script>
+    const btn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      btn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
