@@ -8,54 +8,66 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="js/script.js" defer></script>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-800 text-white shadow">
-    <div class="container mx-auto p-4">
-      <h1 class="text-3xl font-bold">Navy IT Career Guide</h1>
-      <nav class="mt-2">
-        <ul class="flex space-x-4">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="programs.html" class="underline font-semibold">Programs</a></li>
-          <li><a href="training.html" class="hover:underline">Training</a></li>
-          <li><a href="education.html" class="hover:underline">Education</a></li>
-          <li><a href="roadmap.html" class="hover:underline">Career Roadmap</a></li>
-          <li><a href="resources.html" class="hover:underline">Resources</a></li>
+<body class="bg-gray-900 text-white">
+  <header class="bg-black bg-opacity-90 fixed top-0 left-0 w-full z-50 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold tracking-widest">NAVY IT</h1>
+      <nav>
+        <ul class="flex space-x-6 text-sm uppercase">
+          <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+          <li><a href="programs.html" class="text-blue-400 font-semibold">Programs</a></li>
+          <li><a href="training.html" class="hover:text-blue-400">Training</a></li>
+          <li><a href="education.html" class="hover:text-blue-400">Education</a></li>
+          <li><a href="roadmap.html" class="hover:text-blue-400">Roadmap</a></li>
+          <li><a href="resources.html" class="hover:text-blue-400">Resources</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-4">IT-Specific Programs</h2>
-
-    <section class="mb-6">
-      <h3 class="text-xl font-bold">JCAC (Joint Cyber Analysis Course)</h3>
-      <p class="mt-1">A 6-month intensive school for cyber warfare preparation. ITs may attend and either remain in-rate or convert to Cyber Warfare Technician (CWT).</p>
+  <main class="pt-24 pb-16 px-6">
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Programs That Power Your Future</h2>
+      <p class="text-gray-300 max-w-3xl mx-auto">Explore elite training and cyber advancement programs designed to elevate your career as a Navy IT professional.</p>
     </section>
 
-    <section class="mb-6">
-      <h3 class="text-xl font-bold">CANES (Consolidated Afloat Networks and Enterprise Services)</h3>
-      <p class="mt-1">A shipboard system training pipeline. Completion earns the H09A NEC and qualifies ITs for network admin afloat billets.</p>
-    </section>
+    <section class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437f0?auto=format&fit=crop&w=800&q=80" alt="JCAC" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">JCAC (Joint Cyber Analysis Course)</h3>
+          <p class="text-gray-300">Elite cyber warfare school that opens the door to cyber NECs like 743A and CWT conversion. Highly selective, TS/SCI required.</p>
+        </div>
+      </div>
 
-    <section class="mb-6">
-      <h3 class="text-xl font-bold">Cyber Mission Force (CMF)</h3>
-      <p class="mt-1">Elite cyber operations teams under U.S. Cyber Command. ITs in cyber NECs may qualify for these highly selective roles and billet-based advancements.</p>
-    </section>
+      <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1631538326323-5fa7a4dfc4a4?auto=format&fit=crop&w=800&q=80" alt="CANES" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">CANES (H09A)</h3>
+          <p class="text-gray-300">The shipboard backbone for secure communications and networking. Learn systems admin afloat and deploy on advanced platforms.</p>
+        </div>
+      </div>
 
-    <section class="mb-6">
-      <h3 class="text-xl font-bold">CWT Rating Transition</h3>
-      <p class="mt-1">After JCAC, ITs may choose to convert into the CWT rating or retain IT designation with cyber-focused NECs like 743A, 743B, or 741A.</p>
-    </section>
+      <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1605649487376-4c2b41d5464f?auto=format&fit=crop&w=800&q=80" alt="Cyber Mission Force" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Cyber Mission Force (CMF)</h3>
+          <p class="text-gray-300">Top-tier operational billets under U.S. Cyber Command. Conduct defensive/offensive cyber ops alongside NSA and DoD teams.</p>
+        </div>
+      </div>
 
-    <section class="mb-6">
-      <h3 class="text-xl font-bold">Instructor Track (805A / 9502)</h3>
-      <p class="mt-1">ITs can become certified instructors through the 805A school and Master Training Specialist (MTS) 9502 designation for leadership/shore roles.</p>
+      <div class="bg-gray-800 rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1635443148404-3e3fe8f746f1?auto=format&fit=crop&w=800&q=80" alt="Instructor Track" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Instructor & Leadership Track</h3>
+          <p class="text-gray-300">Go 805A and earn your 9502 MTS cert. Become a schoolhouse leader, train future ITs, or lead training teams fleet-wide.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-blue-800 text-white text-center p-4 mt-10">
-    <p>&copy; 2025 Navy IT Career Guide. All rights reserved.</p>
+  <footer class="bg-black text-gray-400 text-center py-6 mt-10">
+    <p>&copy; 2025 Navy IT Career Guide. Built for the Fleet.</p>
   </footer>
 </body>
 </html>
