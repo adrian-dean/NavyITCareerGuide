@@ -1,0 +1,17 @@
+/* style.css - Optional custom styles (extends Tailwind) */
+
+body {
+  scroll-behavior: smooth;
+}
+
+header, footer {
+  transition: background-color 0.3s ease;
+}
+
+nav a {
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #d1fae5; /* Tailwind's emerald-100 */
+}
